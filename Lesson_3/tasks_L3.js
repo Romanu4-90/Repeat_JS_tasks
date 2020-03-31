@@ -247,128 +247,128 @@
 
 // - 7 Создать массив объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет, водитель.
 // Водитель является отдельным объектом с полями имя, возраст, пол, стаж.
-let cars = [
-    carOne = {
-        model: 'Opel',
-        year: 2003,
-        power: 122,
-        color: 'green',
-        driver: {
-            name: 'Roman',
-            age: 29,
-            sex: 'male',
-            experience: 12
-        }
-    },
-    carTwo = {
-        model: 'Volkswagen',
-        year: 2001,
-        power: 110,
-        color: 'white',
-        driver: {
-            name: 'Anton',
-            age: 25,
-            sex: 'male',
-            experience: 10
-        }
-    },
-    carThree = {
-        model: 'Audi',
-        year: 2010,
-        power: 300,
-        color: 'black',
-        driver: {
-            name: 'Natalia',
-            age: 26,
-            sex: 'female',
-            experience: 5
-        }
-    },
-    carFour = {
-        model: 'Mercedes',
-        year: 2005,
-        power: 150,
-        color: 'gray',
-        driver: {
-            name: 'Anna',
-            age: 24,
-            sex: 'female',
-            experience: 3
-        }
-    },
-    carFive = {
-        model: 'Toyota',
-        year: 2010,
-        power: 90,
-        color: 'purple',
-        driver: {
-            name: 'Iryna',
-            age: 25,
-            sex: 'female',
-            experience: 7
-        }
-    },
-    carSixs = {
-        model: 'Honda',
-        year: 2012,
-        power: 170,
-        color: 'red',
-        driver: {
-            name: 'Taras',
-            age: 30,
-            sex: 'male',
-            experience: 12
-        }
-    },
-    carSeven = {
-        model: 'Mazda',
-        year: 2000,
-        power: 135,
-        color: 'blue',
-        driver: {
-            name: 'Serhii',
-            age: 28,
-            sex: 'male',
-            experience: 9
-        }
-    },
-    carEight = {
-        model: 'Fiat',
-        year: 2018,
-        power: 120,
-        color: 'yellow',
-        driver: {
-            name: 'Olga',
-            age: 45,
-            sex: 'female',
-            experience: 20
-        }
-    },
-    carNine = {
-        model: 'Renault',
-        year: 1998,
-        power: 85,
-        color: 'pink',
-        driver: {
-            name: 'Ivan',
-            age: 32,
-            sex: 'male',
-            experience: 10
-        }
-    },
-    carTen = {
-        model: 'Citroen',
-        year: 2007,
-        power: 100,
-        color: 'orange',
-        driver: {
-            name: 'Oleg',
-            age: 35,
-            sex: 'male',
-            experience: 16
-        }
-    },
-];
+// let cars = [
+//     carOne = {
+//         model: 'Opel',
+//         year: 2003,
+//         power: 122,
+//         color: 'green',
+//         driver: {
+//             name: 'Roman',
+//             age: 29,
+//             sex: 'male',
+//             experience: 12
+//         }
+//     },
+//     carTwo = {
+//         model: 'Volkswagen',
+//         year: 2001,
+//         power: 110,
+//         color: 'white',
+//         driver: {
+//             name: 'Anton',
+//             age: 25,
+//             sex: 'male',
+//             experience: 10
+//         }
+//     },
+//     carThree = {
+//         model: 'Audi',
+//         year: 2010,
+//         power: 300,
+//         color: 'black',
+//         driver: {
+//             name: 'Natalia',
+//             age: 26,
+//             sex: 'female',
+//             experience: 5
+//         }
+//     },
+//     carFour = {
+//         model: 'Mercedes',
+//         year: 2005,
+//         power: 150,
+//         color: 'gray',
+//         driver: {
+//             name: 'Anna',
+//             age: 24,
+//             sex: 'female',
+//             experience: 3
+//         }
+//     },
+//     carFive = {
+//         model: 'Toyota',
+//         year: 2010,
+//         power: 90,
+//         color: 'purple',
+//         driver: {
+//             name: 'Iryna',
+//             age: 25,
+//             sex: 'female',
+//             experience: 7
+//         }
+//     },
+//     carSixs = {
+//         model: 'Honda',
+//         year: 2012,
+//         power: 170,
+//         color: 'red',
+//         driver: {
+//             name: 'Taras',
+//             age: 30,
+//             sex: 'male',
+//             experience: 12
+//         }
+//     },
+//     carSeven = {
+//         model: 'Mazda',
+//         year: 2000,
+//         power: 135,
+//         color: 'blue',
+//         driver: {
+//             name: 'Serhii',
+//             age: 28,
+//             sex: 'male',
+//             experience: 9
+//         }
+//     },
+//     carEight = {
+//         model: 'Fiat',
+//         year: 2018,
+//         power: 120,
+//         color: 'yellow',
+//         driver: {
+//             name: 'Olga',
+//             age: 45,
+//             sex: 'female',
+//             experience: 20
+//         }
+//     },
+//     carNine = {
+//         model: 'Renault',
+//         year: 1998,
+//         power: 85,
+//         color: 'pink',
+//         driver: {
+//             name: 'Ivan',
+//             age: 32,
+//             sex: 'male',
+//             experience: 10
+//         }
+//     },
+//     carTen = {
+//         model: 'Citroen',
+//         year: 2007,
+//         power: 100,
+//         color: 'orange',
+//         driver: {
+//             name: 'Oleg',
+//             age: 35,
+//             sex: 'male',
+//             experience: 16
+//         }
+//     },
+// ];
 
 // -  проитерировать каждый массив из задания 5,6,7 при помощи while.
 // iterating array from task number 5 :
@@ -472,6 +472,59 @@ let cars = [
 
 // - Создать массив пользователей. У каждого пользователя обязательно должено быть поле skills которое является массивом
 // Проитерировать массив пользователей и в каждом пользователе проитерировать его массив skills
+
+let users = [
+    userOne = {
+        name: 'Vasya',
+        age: 30,
+        skills:['JS','HTML5','CSS3'],
+        sex: 'male'
+    },
+    userTwo = {
+        name: 'Petya',
+        age: 22,
+        skills:['Python','HTML5','CSS3'],
+        sex: 'male'
+    },
+    userThree = {
+        name: 'Alina',
+        age: 24,
+        skills:['HTML5','CSS3', 'Bootstrap4'],
+        sex: 'female'
+    },
+    userFour = {
+        name: 'Taras',
+        age: 35,
+        skills:['Java','HTML5','CSS3', 'Ruby'],
+        sex: 'male'
+    },
+    userFive = {
+        name: 'Ivan',
+        age: 40,
+        skills:['JS','HTML5','CSS3', 'PHP'],
+        sex: 'male'
+    },
+    userSix = {
+        name: 'Natalia',
+        age: 25,
+        skills:['Adobe Photoshop','HTML5','CSS3', 'GIT'],
+        sex: 'female'
+    },
+    userSeven = {
+        name: 'Roman',
+        age: 29,
+        skills:['JS','HTML5','CSS3','GIT','SWIFT'],
+        sex: 'male'
+    },
+    userEight = {
+        name: 'Kolia',
+        age: 23,
+        skills:['JS','React','CSS3','Bootstrap4'],
+        sex: 'male'
+    }
+];
+
+
 // - Создать массив пользователей. У каждого пользователя обязательно должено быть поле skills которое является массивом
 // Проитерировать массив пользователей и в каждом пользователе проитерировать его массив skills. Скопировать все skills
 // всех пользователей в отедльный массив
