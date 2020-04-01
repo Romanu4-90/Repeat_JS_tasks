@@ -631,7 +631,6 @@ let users = [{
 //
 // code from github ***************************************************************************************************
 
-
 // - З масиву users за допомогою циклу витягнути адреси користувачів і записати (скопіювати) їх в інший порожній масив.
 // let adressArr = [];
 // for (let i = 0; i < users.length; i++) {
@@ -660,40 +659,36 @@ let users = [{
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement,
 // розділивши всі властивості по своїм блокам (div>div*4);
 //
-
-// blockForUser.style.width = '300px';
-// blockForUser.style.height = '400px';
-
-
-for (let i = 0; i < users.length; i++) {
-    let blockForUser = document.createElement('div');
-    document.body.appendChild(blockForUser);
-    blockForUser.style.background = 'yellow';
-
-
-    let nameBlock = document.createElement('div');
-    nameBlock.innerText = `${users[i].name}`;
-    nameBlock.style.color = 'lightgray';
-    blockForUser.appendChild(nameBlock);
-
-
-    let ageBlock = document.createElement('div');
-    ageBlock.innerText = `${users[i].age}`;
-    ageBlock.style.color = 'lightgray';
-    blockForUser.appendChild(ageBlock);
-
-    let statusBlock = document.createElement('div');
-    statusBlock.innerText = `${users[i].status}`;
-    statusBlock.style.color = 'lightgray';
-    blockForUser.appendChild(statusBlock);
-
-    let addressBlock = document.createElement('div');
-    addressBlock.innerText = `${users[i].address}`;
-    addressBlock.style.color = 'lightgray';
-    blockForUser.appendChild(addressBlock);
-
-
-}
+//
+// for (let i = 0; i < users.length; i++) {
+//     let blockForUser = document.createElement('div');
+//     document.body.appendChild(blockForUser);
+//     blockForUser.style.background = 'yellow';
+//     blockForUser.style.border = '1px solid black'
+//
+//
+//     let nameBlock = document.createElement('div');
+//     nameBlock.innerText = `${users[i].name}`;
+//     nameBlock.style.color = 'green';
+//     blockForUser.appendChild(nameBlock);
+//
+//
+//     let ageBlock = document.createElement('div');
+//     ageBlock.innerText = `${users[i].age}`;
+//     ageBlock.style.color = 'black';
+//     blockForUser.appendChild(ageBlock);
+//
+//     let statusBlock = document.createElement('div');
+//     statusBlock.innerText = `${users[i].status}`;
+//     statusBlock.style.color = 'violet';
+//     blockForUser.appendChild(statusBlock);
+//
+//     let addressBlock = document.createElement('div');
+//     addressBlock.innerText = `${users[i].address}`;
+//     addressBlock.style.color = 'blue';
+//     blockForUser.appendChild(addressBlock);
+//
+// }
 
 
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement,
