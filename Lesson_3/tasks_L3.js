@@ -527,6 +527,14 @@
 //     }
 // ];
 //
+// for (const user of users) {
+//     // console.log(user);
+//     for (const skill of user.skills) {
+//         console.log(skill);
+//     }
+// }
+
+
 // let skillsArr = [];
 //
 // for (const user of users) {
@@ -536,7 +544,9 @@
 //
 // console.log(skillsArr);
 
-// - За допомогою 2х циклів циклів проітеррувати  даний масив і масив кожного об'єкта.
+// TODO check result
+
+//  - За допомогою 2х циклів циклів проітеррувати  даний масив і масив кожного об'єкта.
 // let users = [{name: 'vasya', age: 31, status: false, skills: ['java', 'js']},
 //     {name: 'petya', age: 30, status: true, skills: ['java', 'js', 'html']},
 //     {name: 'kolya', age: 29, status: true, skills: ['mysql', 'mongo']},
@@ -549,64 +559,67 @@
 //
 // for (const user of users) {
 //     console.log(user.skills);
-// }
+// } TO TOtodo
 
-let users = [{
-    name: 'vasya',
-    age: 31,
-    status: false,
-    address: {city: 'Lviv', country: 'Ukraine', street: 'Shevchenko', houseNumber: 1}
-}, {
-    name: 'petya',
-    age: 30,
-    status: true,
-    address: {city: 'New York', country: 'USA', street: 'East str', houseNumber: 21}
-}, {
-    name: 'kolya',
-    age: 29,
-    status: true,
-    address: {city: 'Budapest', country: 'Hungary', street: 'Kuraku', houseNumber: 78}
-}, {
-    name: 'olya',
-    age: 28,
-    status: false,
-    address: {city: 'Prague', country: 'Czech', street: 'Paster', houseNumber: 56}
-}, {
-    name: 'max',
-    age: 30,
-    status: true,
-    address: {city: 'Istanbul', country: 'Turkey', street: 'Mikar', houseNumber: 39}
-}, {
-    name: 'anya',
-    age: 31,
-    status: false,
-    address: {city: 'Rio', country: 'Brasil', street: 'Ronaldi', houseNumber: 5}
-}, {
-    name: 'oleg',
-    age: 28,
-    status: false,
-    address: {city: 'Montreal', country: 'Canada', street: 'Acusto', houseNumber: 90}
-}, {
-    name: 'andrey',
-    age: 29,
-    status: true,
-    address: {city: 'Quebeck', country: 'Canada', street: 'Binaro', houseNumber: 33}
-}, {
-    name: 'masha',
-    age: 30,
-    status: true,
-    address: {city: 'Moscow', country: 'Russia', street: 'Gogolia', houseNumber: 1}
-}, {
-    name: 'olya',
-    age: 31,
-    status: false,
-    address: {city: 'Portland', country: 'USA', street: 'Forest str', houseNumber: 4}
-}, {
-    name: 'max',
-    age: 31,
-    status: true,
-    address: {city: 'Cairo', country: 'Egypt', street: 'Seashore', houseNumber: 45}
-}];
+// let users = [{
+//     name: 'vasya',
+//     age: 31,
+//     status: false,
+//     address: {city: 'Lviv', country: 'Ukraine', street: 'Shevchenko', houseNumber: 1}
+// }, {
+//     name: 'petya',
+//     age: 30,
+//     status: true,
+//     address: {city: 'New York', country: 'USA', street: 'East str', houseNumber: 21}
+// }, {
+//     name: 'kolya',
+//     age: 29,
+//     status: true,
+//     address: {city: 'Budapest', country: 'Hungary', street: 'Kuraku', houseNumber: 78}
+// }, {
+//     name: 'olya',
+//     age: 28,
+//     status: false,
+//     address: {city: 'Prague', country: 'Czech', street: 'Paster', houseNumber: 56}
+// }, {
+//     name: 'max',
+//     age: 30,
+//     status: true,
+//     address: {city: 'Istanbul', country: 'Turkey', street: 'Mikar', houseNumber: 39}
+// }, {
+//     name: 'anya',
+//     age: 31,
+//     status: false,
+//     address: {city: 'Rio', country: 'Brasil', street: 'Ronaldi', houseNumber: 5}
+// }, {
+//     name: 'oleg',
+//     age: 28,
+//     status: false,
+//     address: {city: 'Montreal', country: 'Canada', street: 'Acusto', houseNumber: 90}
+// }, {
+//     name: 'andrey',
+//     age: 29,
+//     status: true,
+//     address: {city: 'Quebeck', country: 'Canada', street: 'Binaro', houseNumber: 33}
+// }, {
+//     name: 'masha',
+//     age: 30,
+//     status: true,
+//     address: {city: 'Moscow', country: 'Russia', street: 'Gogolia', houseNumber: 1}
+// }, {
+//     name: 'olya',
+//     age: 31,
+//     status: false,
+//     address: {city: 'Portland', country: 'USA', street: 'Forest str', houseNumber: 4}
+// }, {
+//     name: 'max',
+//     age: 31,
+//     status: true,
+//     address: {city: 'Cairo', country: 'Egypt', street: 'Seashore', houseNumber: 45}
+// }];
+//
+// console.log(users[0].address.city);
+
 
 // code from github ***************************************************************************************************
 // let users = [
@@ -655,80 +668,297 @@ let users = [{
 //     document.body.appendChild(containerForUsers);
 // }
 
-
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement,
 // розділивши всі властивості по своїм блокам (div>div*4);
 //
-//
 // for (let i = 0; i < users.length; i++) {
-//     let blockForUser = document.createElement('div');
-//     document.body.appendChild(blockForUser);
-//     blockForUser.style.background = 'yellow';
-//     blockForUser.style.border = '1px solid black'
+// const user = users[i];
+//     const blockForUser = document.createElement('div'); // створюю div для кожного юзера
+//     document.body.appendChild(blockForUser); // вставляю даний div в body
+//     blockForUser.style.background = 'yellow'; // стиль для даного елементу
+//     blockForUser.style.border = '1px solid black'; // стиль для даного елементу
 //
 //
-//     let nameBlock = document.createElement('div');
-//     nameBlock.innerText = `${users[i].name}`;
-//     nameBlock.style.color = 'green';
-//     blockForUser.appendChild(nameBlock);
+//     const name = document.createElement('div'); // створюю div для властивості name;
+//     name.innerText = `${user.name}`; // додаю контент з властивості name;
+//     name.style.color = 'green'; // колір тексту для контенту name;
+//     blockForUser.appendChild(name);  // вставляю даний div в батьківський div
 //
 //
-//     let ageBlock = document.createElement('div');
-//     ageBlock.innerText = `${users[i].age}`;
-//     ageBlock.style.color = 'black';
-//     blockForUser.appendChild(ageBlock);
+//     const age = document.createElement('div');// створюю div для властивості age;
+//     age.innerText = `${user.age}`;// додаю контент з властивості age;
+//     age.style.color = 'black'; // колір тексту для контенту age;
+//     blockForUser.appendChild(age); // вставляю даний div в батьківський div
 //
-//     let statusBlock = document.createElement('div');
-//     statusBlock.innerText = `${users[i].status}`;
-//     statusBlock.style.color = 'violet';
-//     blockForUser.appendChild(statusBlock);
+//     const status = document.createElement('div'); // створюю div для властивості status;
+//     status.innerText = `${user.status}`; // додаю контент з властивості status;
+//     status.style.color = 'violet'; // колір тексту для контенту status;
+//     blockForUser.appendChild(status); // вставляю даний div в батьківський div
 //
-//     let addressBlock = document.createElement('div');
-//     addressBlock.innerText = `${users[i].address}`;
-//     addressBlock.style.color = 'blue';
-//     blockForUser.appendChild(addressBlock);
+//     const address = document.createElement('div'); // створюю div для властивості address;
+//     address.innerText = `${user.address.city}`; // додаю контент з властивості address;
+//     address.style.color = 'blue'; // колір тексту для контенту address;
+//     blockForUser.appendChild(address); // вставляю даний div в батьківський div
 //
 // }
-
 
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement,
 // розділивши всі властивості по своїм блокам , блок з адресою зробити окремим блоком, з блоками для кожної властивості
 //
-
-
+// for (let i = 0; i < users.length; i++) {
+//     let blockForUser = document.createElement('div'); // створюю div для кожного юзера;
+//     document.body.appendChild(blockForUser); // вставляю даний div в body;
+//     blockForUser.style.background = 'yellow'; // стиль для даного елементу;
+//     blockForUser.style.border = '1px solid black'; // стиль для даного елементу;
 //
 //
+//     let nameBlock = document.createElement('div'); // створюю div для властивості name;
+//     nameBlock.innerText = `${users[i].name}`; // додаю контент з властивості name;
+//     nameBlock.style.color = 'green'; // колір тексту для контенту name;
+//     blockForUser.appendChild(nameBlock);  // вставляю даний div в батьківський div;
+//
+//
+//     let ageBlock = document.createElement('div');// створюю div для властивості age;
+//     ageBlock.innerText = `${users[i].age}`;// додаю контент з властивості age;
+//     ageBlock.style.color = 'black'; // колір тексту для контенту age;
+//     blockForUser.appendChild(ageBlock); // вставляю даний div в батьківський div;
+//
+//
+//     let statusBlock = document.createElement('div'); // створюю div для властивості status;
+//     statusBlock.innerText = `${users[i].status}`; // додаю контент з властивості status;
+//     statusBlock.style.color = 'violet'; // колір тексту для контенту status;
+//     blockForUser.appendChild(statusBlock); // вставляю даний div в батьківський div;
+//
+//     let addressBlock = document.createElement('div'); // створюю div для властивості address;
+//     let addressCity = document.createElement('div'); // створюю div для властивості city;
+//     addressCity.innerText = `${users[i].address.city}`; // додаю контент з властивості city;
+//     let addressCountry = document.createElement('div'); // створюю div для властивості country;
+//     addressCountry.innerText = `${users[i].address.country}`; // додаю контент з властивості country;
+//     let addressStreet = document.createElement('div'); // створюю div для властивості street;
+//     addressStreet.innerText = `${users[i].address.street}`; // додаю контент з властивості country;
+//     let addressHouseNumber = document.createElement('div'); // створюю div для властивості houseNumber;
+//     addressHouseNumber.innerText = `${users[i].address.houseNumber}`;
+//     addressBlock.appendChild(addressCity); // вставляю даний div до загального div для об'єкту address;
+//     addressBlock.appendChild(addressCountry);  // вставляю даний div до загального div для об'єкту address;
+//     addressBlock.appendChild(addressStreet);  // вставляю даний div до загального div для об'єкту address;
+//     addressBlock.appendChild(addressHouseNumber);  // вставляю даний div до загального div для об'єкту address;
+//
+//     blockForUser.appendChild(addressBlock); // вставляю даний div в батьківський div;
+//
+// }
+// розв'язок від ментора owu :
+//
+// const wrap = document.createElement('div');
+//
+// for (let i = 0; i < users.length; i++) {
+//     const user = users[i];
+//
+//     const div = document.createElement('div');
+//     const name = document.createElement('div');
+//     const age = document.createElement('div');
+//     const status = document.createElement('div');
+//     const address = document.createElement('div');
+//     const city = document.createElement('div');
+//     const country = document.createElement('div');
+//     const street = document.createElement('div');
+//     const houseNumber = document.createElement('div');
+//
+//
+//     name.innerText = user.name;
+//     age.innerText = user.age;
+//     status.innerText = user.status;
+//     city.innerText = user.address.city;
+//     country.innerText = user.address.country;
+//     street.innerText = user.address.street;
+//     houseNumber.innerText = user.address.houseNumber;
+//
+//     div.appendChild(name);
+//     div.appendChild(age);
+//     div.appendChild(status);
+//     address.appendChild(city);
+//     address.appendChild(country);
+//     address.appendChild(street);
+//     address.appendChild(houseNumber);
+//
+//
+//     div.appendChild(address);
+//     wrap.appendChild(div);
+//
+// }
+//
+// document.body.appendChild(wrap);
+
 // - Дано 2 масиви з рівною кількістю об'єктів.
 // Масиви:
-// let usersWithId = [{id: 1, name: 'vasya', age: 31, status: false}, {id: 2, name: 'petya', age: 30, status: true},
-// {id: 3, name: 'kolya', age: 29, status: true}, {id: 4, name: 'olya', age: 28, status: false},];
-// let citiesWithId = [{user_id: 3, country: 'USA', city: 'Portland'},
-// {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
-// {user_id: 2, country: 'Poland', city: 'Krakow'},
-// {user_id: 4, country: 'USA', city: 'Miami'},];
-
 // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
 // Записати цей об'єкт в новий масив
 // Частковий приклад реультату:
 // let usersWithCities = [{id: 1, name: 'vasya', age: 31, status: false, address:
 // {user_id: 1, country: 'Ukraine', city: 'Ternopil'}}....]
-
+//
+// let usersWithId = [
+//     {id: 1, name: 'vasya', age: 31, status: false},
+//     {id: 2, name: 'petya', age: 30, status: true},
+//     {id: 4, name: 'olya', age: 28, status: false},
+//     {id: 3, name: 'kolya', age: 29, status: true}
+// ];
+//
+// let citiesWithId = [
+//     {user_id: 3, country: 'USA', city: 'Portland'},
+//     {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+//     {user_id: 2, country: 'Poland', city: 'Krakow'},
+//     {user_id: 4, country: 'USA', city: 'Miami'}
+// ];
+// код від ментора owu: *************************
+// for (const user of usersWithId) {
+//     for (const city of citiesWithId) {
+//         if (user.id === city.user_id) {
+//             user.address = city;
+//         }
+//     }
+// }
+// console.log(usersWithId);
+// код від ментора owu: *************************
 
 //
-// - створити розмітці блок з id, class та текстом в середені. Зчитати окремо цей текст з селекторів по id , class та тегу
+// - створити розмітці блок з id, class та текстом в середені. Зчитати окремо цей текст з селекторів по id ,
+// class та тегу
+// by Id:
+// const text = document.getElementById('text');
+// console.log(text.innerText);
+// by className:
+// const text = document.getElementsByClassName('text');
+// console.log(text[0].innerText);
+// by tagName:
+// const text = document.getElementsByTagName('p');
+// console.log(text[0].innerText);
+
 // - змінити цей текст використовуючи селектори id, class,  tag
+// by Id:
+// const text = document.getElementById('text');
+// text.innerText = 'Changed text';
+// by className :
+// const text = document.getElementsByClassName('text');
+// text[0].innerText = 'Text changrd from className';
+// by TagName :
+// const text = document.getElementsByTagName('p');
+// text[0].innerText = 'TExt changed from tagName';
+
 // - змінити висоту та ширину блоку використовуючи селектори id, class,  tag
+// by id:
+// const block = document.getElementById('text');
+// block.style.width = '300px';
+// block.style.height = '300px';
+// block.style.background = 'yellow';
+
+// by className :
+// const block = document.getElementsByClassName('text');
+// block[0].style.width = '300px';
+// block[0].style.height = '300px';
+// block[0].style.background = 'yellow';
+
+// by tagName:
+// const block = document.getElementsByTagName("p");
+// block[0].style.width = '300px';
+// block[0].style.height = '300px';
+// block[0].style.background = 'yellow';
+
 // - за допомоги document.createElement та appendChild створити таблицю на 1 рядок з трьома ячейками всередені
+// const div = document.createElement('div');
+// div.style.width = '500px';
+// div.style.height = '500px';
+// div.style.border = '1px solid black';
+//
+// const table = document.createElement('table');
+// const tr = document.createElement('tr');
+// const td1 = document.createElement('td1');
+// const td2 = document.createElement('td2');
+// const td3 = document.createElement('td3');
+//
+// table.appendChild(tr);
+// tr.appendChild(td1);
+// tr.appendChild(td2);
+// tr.appendChild(td3);
+//
+// div.appendChild(table);
+// document.body.appendChild(div);
+
 // - за допомоги document.createElement, appendChild та циклу створити таблицю на 10 рядків з трьома ячейками всередені
+// const table = document.createElement('table');
+// for (let i = 0; i < 10; i++) {
+//         const tr = document.createElement('tr');
+//     for (let j = 0; j < 3; j++) {
+//         const td = document.createElement('td');
+//         tr.appendChild(td);
+//     }
+//         table.appendChild(tr)
+// }
+// document.body.appendChild(table);
+
 // - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на 10 рядків з 5 ячейками всередені
+// const table = document.createElement('table');
+// for (let i = 0; i < 10; i++) {
+//         const tr = document.createElement('tr');
+//     for (let j = 0; j < 5; j++) {
+//         const td = document.createElement('td');
+//         tr.appendChild(td);
+//     }
+//         table.appendChild(tr)
+// }
+// document.body.appendChild(table);(
+
 // - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на n рядків з m ячейками всередені. n
 // та m отримати з prompt
 //
-// --Завантажити з мережі будь-який шаблон сайту. Підключити до нього свій скріпт-файл. У файлі прописати наступні
+// const n = prompt('Enter a number of rows :');
+// const m = prompt('Enter a number of cells :');
+// const table = document.createElement('table');
+// for (let i = 0; i < n; i++) {
+//         const tr = document.createElement('tr');
+//     for (let j = 0; j < m; j++) {
+//         const td = document.createElement('td');
+//         tr.appendChild(td);
+//     }
+//         table.appendChild(tr)
+// }
+// document.body.appendChild(table);
+
+// --Завантажив файл rules!! Підключити до нього свій скріпт-файл. У файлі прописати наступні
 // доступи та дії
+//
 // - знайти всі елементі, які мають id
+//
+// const tagArrays = document.getElementsByTagName('*'); // дістав всі теги зі сторінки
+// for (const tag of tagArrays) {
+//     console.log(tag.id);
+// }
+//
+// код від ментора*******************
+// for (const tag of tagArrays) {
+//     if (tag.getAttribute('id')) {
+//         console.log(tag);
+//     }
+// }
+// код від ментора*******************
+//
+// for (const tag of tags) {
+//     console.log(tag.id);
+// }
+//
 // - знайти всі параграфи ,та змінити текст на hello oktenweb!
-//     - знайти всі div та змінити ім колір на червоний
+//
+// const tagsP = document.getElementsByTagName('p'); // дістав всі теги p зі сторінки
+// for (const p of tagsP) {
+//     p.innerText = 'hello oktenweb!'
+// }
+//
+//- знайти всі div та змінити ім колір на червоний
+//
+// const tagsDiv = document.getElementsByTagName('div'); // дістав всі теги p зі сторінки
+// for (const div of tagsDiv) {
+//     div.style.background = 'red';
+//     div.style.border = '1px solid black'
+// }
 
 // ============   class   ============
 
@@ -737,12 +967,27 @@ let users = [{
 // створити скрипт, котрий зчитує всі заголовки, та робить в блоці з id=content з них список(ul>li), який буде змістом
 // того, що знаходиться на сторінці.
 // Скріпт повинен працювати навіть якщо кількість блоків з заголовком та параграфом зміниться.
+//
+// const h2Array = document.getElementsByTagName('h2');
+//
+// const div = document.createElement('div');
+// div.id = 'content';
+//
+// const  ul = document.createElement('ul');
+// for (const h2 of h2Array) {
+//     const li = document.createElement('li');
+//     li.innerText = `${h2.innerText}`;
+//     ul.appendChild(li)
+// }
+//
+// div.appendChild(ul);
+// document.body.appendChild(div);
+
 
 // -Є масив котрий характеризує правила. Створити скрипт який ітерує цей масив, та робить з кожне правило в окремому блоці.
 // При цому в блоці, номер правила записати в свій блок, текст правила записати в свій окремий блок.
 // Результатом відпрацювання скріпта повинна бути структура яка міститься в блоці wrap файла rule.html
-//todo add rules
-
+//
 // let rules = [
 //     {
 //         title: 'Первое правило Бойцовского клуба.',
@@ -779,20 +1024,198 @@ let users = [{
 //
 // ];
 //
+// const wrap = document.createElement('div');
+// wrap.id = 'wrap';
+//
+// for (let i = 0; i < rules.length; i++) {
+//     const rule = rules[i];
+//     const div = document.createElement('div');
+//     const h2 = document.createElement('h2');
+//     const p = document.createElement('p');
+//
+//     div.className = `rules rule ${i}`
+//     h2.innerText = rule.title;
+//     p.innerText = rule.body;
+//
+//     div.appendChild(h2);
+//     div.appendChild(p);
+//
+//     wrap.appendChild(div);
+// }
+// document.body.appendChild(wrap);
 
 
 // *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі users. За допомогою document.createElement
-// вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт в свій блок (блок в блоці).
+// вивести їх в браузер. Помістити кожен окремий об'єкт в блок,
+// при цьому кожен внутрішній об'єкт в свій блок (блок в блоці). Трохи змінив стиль оформлення завдання(методика та сама)
+//
+// let arrayOfUsers = [];
+// const wrap = document.createElement('div');
+// wrap.className = 'wrap';
+// wrap.style.border = '1px solid black';
+//
+// fetch('https://jsonplaceholder.typicode.com/users')
+//     .then(res => res.json())
+//     .then(arrayOfUsers => {
+//
+//         for (const user of arrayOfUsers) {
+//
+//             const usersBlock = document.createElement('div');
+//             usersBlock.className = 'user';
+//             usersBlock.style.border = '1px solid red';
+//             usersBlock.style.background = 'gray';
+//
+//             const id = document.createElement('p');
+//             const name = document.createElement('p');
+//             const username = document.createElement('p');
+//             const email = document.createElement('p');
+//             const street = document.createElement('p');
+//             const city = document.createElement('p');
+//
+//             id.innerText = user.id;
+//             name.innerText = user.name;
+//             username.innerText = user.username;
+//             email.innerText = user.email;
+//             street.innerText = user.address.street;
+//             city.innerText = user.address.city;
+//
+//             usersBlock.appendChild(id);
+//             usersBlock.appendChild(name);
+//             usersBlock.appendChild(username);
+//             usersBlock.appendChild(email);
+//             usersBlock.appendChild(street);
+//             usersBlock.appendChild(city);
+//
+//             wrap.appendChild(usersBlock);
+//
+//         }
+//     });
+//
+//
+//
+// document.body.appendChild(wrap);
+
+
 // *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі posts. За допомогою document.createElement
 // вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує)
-// в свій блок (блок в блоці).
+// в свій блок (блок в блоці).Трохи змінив стиль оформлення завдання(методика та сама)!!
+//
+// let arrayOfPosts = [];
+// const wrap = document.createElement('div');
+// wrap.className = 'wrap';
+// wrap.style.border = '1px solid black';
+//
+// fetch('https://jsonplaceholder.typicode.com/posts')
+//     .then(res => res.json())
+//     .then(arrayOfPosts => {
+//
+//         for (const post of arrayOfPosts) {
+//
+//             const postDiv = document.createElement('div');
+//             postDiv.className = 'user';
+//             postDiv.style.border = '1px solid red';
+//             postDiv.style.background = 'gray';
+//
+//             const userId = document.createElement('h3');
+//             const id = document.createElement('div');
+//             const title = document.createElement('div');
+//             const body = document.createElement('div');
+//
+//             userId.innerText = `userId: ${post.userId}`;
+//             id.innerText = `id: ${post.id}`;
+//             title.innerText = `title: ${post.title}`;
+//             body.innerText = `body: ${post.body}`;
+//
+//
+//             postDiv.appendChild(userId);
+//             postDiv.appendChild(id);
+//             postDiv.appendChild(title);
+//             postDiv.appendChild(body);
+//
+//
+//             wrap.appendChild(postDiv);
+//
+//         }
+//     });
+//
+// document.body.appendChild(wrap);
+
+
 // *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі comments. За допомогою document.createElement
 // вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в
-// свій блок (блок в блоці).
+// свій блок (блок в блоці).Трохи змінив стиль оформлення завдання(методика та сама)!!
+//
+// let arrayOfComments = [];
+// const wrap = document.createElement('div');
+// wrap.className = 'wrap';
+// wrap.style.border = '1px solid black';
+//
+// fetch('https://jsonplaceholder.typicode.com/comments')
+//     .then(res => res.json())
+//     .then(arrayOfComments => {
+//
+//         for (const comment of arrayOfComments) {
+//             const commentDiv = document.createElement('div');
+//             commentDiv.style.border = '1px solid red';
+//             commentDiv.style.background = 'gray';
+//
+//             const postId = document.createElement('h3');
+//             const id = document.createElement('div');
+//             const name = document.createElement('div');
+//             const email = document.createElement('div');
+//             const body = document.createElement('div');
+//
+//             postId.innerText = `postId : ${comment.postId}`;
+//             id.innerText = `id : ${comment.id}`;
+//             name.innerText = `name : ${comment.name}`;
+//             email.innerText = `email : ${comment.email}`;
+//             body.innerText = `body : ${comment.body}`;
+//
+//
+//             commentDiv.appendChild(postId);
+//             commentDiv.appendChild(id);
+//             commentDiv.appendChild(name);
+//             commentDiv.appendChild(email);
+//             commentDiv.appendChild(body);
+//
+//
+//             wrap.appendChild(commentDiv);
+//
+//         }
+//     });
+//
+// document.body.appendChild(wrap);
+
+
 // ****** при помощи fetch (как в примере) получить от jsonplaceholder все posts. Внутри последнего then()
 // сделать еще один fetch который сделает запрос и получит все comments. Объеденить соответсвующий post с
 // соответсвующими comment и вывести в браузер. Подсказка : в каждом comment есть поле postId которое определяет какой
 // комментарий принадлежит какому посту
+//
+// let postsArray = [];
+// let commentsArray = [];
+//
+// fetch('https://jsonplaceholder.typicode.com/posts')
+//     .then(response => response.json())
+//     .then(postsArray => {
+//         fetch('https://jsonplaceholder.typicode.com/comments').then(response =>
+//             response.json().then(commentsArray => {
+//
+//                 for (const post of postsArray) {
+//
+//                     for (const comment of commentsArray) {
+//                         if (post.id === comment.postId){
+//                             post.comments = comment;
+//                         }
+//                     }
+//
+//                 }
+//                 console.log(postsArray);
+//
+//             }))
+//
+//
+//     });
 
 
 // ******************************************************************************************************
@@ -842,19 +1265,78 @@ let users = [{
 // - вік + ім'я 5го об'єкта
 // - вік + сатус Анни
 // Приклад: вивести ім'я 1го об'єкта. Відповідь: console.log (users [0] .name). Будьте уважні! 4й об'єкт має індес 3!
+// -- статус Андрея
+// console.log(users[7].status);
+// -- статус Максима
+// console.log(users[4].status);
+// -- имя предпоследнего объекта
+// console.log(users[9].status);
+// -- имя третьего объекта
+// console.log(users[3].name)
+// -- возраст Олега
+// -- возраст Оли
+// -- возраст + имя 5го объекта
+// -- возраст + сатус ани
+// console.log(users[5].age + ' ' + users[5].status);
+
 
 // -Візьміть файл template1.html, підключіть до нього скрипт, і працюйте в ньому.
 //
-// -- Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName або document.getElementsByTagName :
+// -- Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName
+// або document.getElementsByTagName :
+
 // - отримує текст з параграфа з id "content"
+// const contentText = document.getElementById('content');
+// console.log(contentText.innerText);
+
 // - отримує текст з блоку з id "rules"
-// - замініть текст параграфа з id 'content' на будь-який інший
+// const  rulesText = document.getElementById('rules');
+// console.log(rulesText.innerText);
+
+// // - замініть текст параграфа з id 'content' на будь-який інший
+// const contentText = document.getElementById('content');
+// contentText.innerText = 'Changed Text in element with id Content ';
+
 // - замініть текст параграфа з id 'rules' на будь-який інший
+// const  rulesText = document.getElementById('rules');
+// rulesText.innerText = 'Changed Text in element with id rules';
+
 // - змініть кожному елементу колір фону на червоний
+//
+// let elemArr = document.body.getElementsByTagName('*');
+// for (let i = 0; i < elemArr.length; i++) {
+//     const elem = elemArr[i];
+//     if (i % 2 === 0) {
+//         elem.style.background = 'red';
+//     } else {
+//         elem.style.background = 'blue';
+//     }
+// }
+
 // - змініть кожному елементу колір тексту на синій
+// let elemArr = document.body.getElementsByTagName('*');
+// for (let i = 0; i < elemArr.length; i++) {
+//     const elem = elemArr[i];
+//     elem.style.background = 'blue';
+// }
+
+
 // - отримати весь список класів елемента з id=rules і вивести їх в console.log
+// let classesInIdElem = document.getElementById('rules').getElementsByClassName('*')
+// console.log(classesInIdElem);
+
 // - отримати всі елементи з класом fc_rules
+//
+// let findClass = document.getElementsByClassName('fc_rules');
+// console.log(findClass);
+
 // - поміняти колір тексту у всіх елементів fc_rules на червоний
+// let findClass = document.getElementsByClassName('fc_rules');
+// for (let i = 0; i < findClass.length; i++) {
+//     const elem = findClass[i];
+//
+//     elem.style.color = 'red';
+// }
 
 
 // =====class=======
@@ -862,17 +1344,109 @@ let users = [{
 // Взяти файл template_2.html та працювати в ньому
 // - Напишіть код, який :
 // -- змінює колір тексту елемнту з ід main_header на будь-який інший
+// let chcolor = document.getElementById('main_header');
+// chcolor.style.color = 'blue';
+
 // -- робить шириниу елементу ul 400 пікселів
+// let ul = document.getElementsByTagName('ul');
+// через доступ до індексу елемента:
+// ul[0].style.width = '400px';
+// ul[0].style.background = 'yellow';
+// через цикл:
+// for (const ulElement of ul) {
+//     ulElement.style.width = '400px';
+//     ulElement.style.background = 'yellow';
+// }
+
 // -- робить шириниу всіх елементів з класом linkList шириною 50%
+// let classlist = document.getElementsByClassName('linkList');
+// // console.log(classlist);
+//
+// for (let i = 0; i < classlist.length; i++) {
+//     const element = classlist[i];
+//
+//     element.style.width = '50%';
+//     element.style.background = 'yellow';
+// }
+
 // -- отримує текст який зберігається в елементі з класом listElement2
+
+// let text = document.getElementsByClassName('listElement2');
+// через . :
+// console.log(text[0].innerText);
+// за допомогою циклу:
+// for (const element of text) {
+//     console.log(element.innerText);
+// }
+
 // -- отримує всі елементи li та змінює ім колір фону на сірий
+//
+// let li = document.getElementsByTagName('li');
+// for (const liElement of li) {
+//     liElement.style.background = 'gray';
+// }
+
 // -- отримує всі елементи 'a' та додає їм клас anchor
+//
+// let a = document.getElementsByTagName('a');
+// console.log(a);
+// for (const aElement of a) {
+//     aElement.className = 'anchor';
+// }
+
 // -- отримує всі елементи 'a' та у випадку, якщо текстовий контен елементу дорівнює link3, змінює йому розмір
 // тексту на 40 пікселів
+//
+// let a = document.getElementsByTagName('a');
+// for (const aElement of a) {
+//     if (aElement.innerText === 'link3') {
+//
+//         aElement.style.fontSize = '40px';
+//     }
+// }
+
 // -- отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a
+//
+// let a = document.getElementsByTagName('a');
+// for (const aElement of a) {
+//     aElement.className = `element_${aElement.innerText}`;
+// }
+
 // -- отримує всі елементи 'sub-header' та змінює колір фону. Фон отримати з prompt()
+//
+// let subHeader = document.getElementsByClassName('sub-header');
+//
+// for (const element of subHeader) {
+//     element.style.background = prompt('Enter a color :');
+//     // console.log(element);
+// }
+
 // -- отримує всі елементи 'sub-header' та змінює колір тексту у видаку якщо текст елемнту = content 2 segment.
 //     Колір отримати з prompt()
+//
+// let subHeader = document.getElementsByClassName('sub-header');
+//
+// for (const element of subHeader) {
+//     if (element.innerText === 'content 2 segment') {
+//         element.style.background = prompt('Enter a color :');
+//     }
+// }
+
 // -- отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
+//
+// let contentText = document.getElementsByClassName('content_1');
+// contentText[0].innerText = prompt('Enter a some text : ');
+
 // -- отримати елементи p та змінити їм paddin на довільне значення
+//
+// let p = document.getElementsByTagName('p');
+//
+// for (const pElement of p) {
+//     pElement.style.padding = '20px 20px'
+// }
+
 // -- отримати елементи з класом text2 та змінити їм текст на довільне значення
+//
+// let text = document.getElementsByClassName('text2');
+// // console.log(text);
+// text[0].innerText = 'This is changed text';
