@@ -544,7 +544,6 @@
 //
 // console.log(skillsArr);
 
-// TODO check result
 
 //  - За допомогою 2х циклів циклів проітеррувати  даний масив і масив кожного об'єкта.
 // let users = [{name: 'vasya', age: 31, status: false, skills: ['java', 'js']},
@@ -553,13 +552,15 @@
 //     {name: 'olya', age: 28, status: false, skills: ['java', 'js']},
 //     {name: 'max', age: 30, status: true, skills: ['mysql', 'mongo']}];
 //
-// for (let i = 0; i < users.length; i++) {
-//     console.log(users[i]);
-// }
-//
 // for (const user of users) {
-//     console.log(user.skills);
-// } TO TOtodo
+//     console.log(user);
+//     for (const skill of user.skills) {
+//         console.log(skill);
+//     }
+// }
+
+
+
 
 // let users = [{
 //     name: 'vasya',
