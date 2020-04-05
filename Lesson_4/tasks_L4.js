@@ -355,6 +355,7 @@
 
 // - приймає масив автомобілів (можна взяти з попередніх дз ),та  індентифікатор елемнту в який потрібно додати список
 // цих автомобілів.
+//
 // let cars = [
 //     carOne = {
 //         model: 'Opel',
@@ -386,7 +387,7 @@
 //         power: 90,
 //         color: 'purple'
 //     },
-//     carSixs = {
+//     carSix = {
 //         model: 'Honda',
 //         year: 2012,
 //         power: 170,
@@ -418,7 +419,8 @@
 //     },
 // ];
 //
-
+// додати список всіх автомобілів з масиву(вище) в отриманий ідентифікатор елементу:
+//
 // function listOfCars(array, id) {
 //     const block = document.getElementById(`${id}`);
 //     const ul = document.createElement('ul');
@@ -446,8 +448,9 @@
 //         const carBlock = document.createElement('div');
 //         const car = array[i];
 //         // let jsonedCar = JSON.stringify(car);
-//         // carBlock.innerText = jsonedCar;
-//         carBlock.innerText = ` model - ${car.model}, year - ${car.year}, power - ${car.power}, color - ${car.color}`;
+//         // carBlock.innerText = jsonedCar; // простіший варіант;
+
+//         carBlock.innerText = `model - ${car.model}, year - ${car.year}, power - ${car.power}, color - ${car.color}`;
 //
 //         block.appendChild(carBlock);
 //     }
