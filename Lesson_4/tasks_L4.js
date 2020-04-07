@@ -535,72 +535,6 @@
 // let userWithAddress = concatArrays(usersWithId,citiesWithId);
 // console.log(userWithAddress);
 
-
-let rules = [
-    {
-        title: 'Первое правило Бойцовского клуба.',
-        body: 'Никому не рассказывать о Бойцовском клубе.'
-    },
-    {
-        title: 'Второе правило Бойцовского клуба.',
-        body: 'Никогда никому не рассказывать о Бойцовском клубе.'
-    },
-    {
-        title: 'Третье правило Бойцовского клуба.',
-        body: 'В схватке участвуют только двое.'
-    },
-    {
-        title: 'Четвертое правило Бойцовского клуба.',
-        body: 'Не более одного поединка за один раз.'
-    },
-    {
-        title: 'Пятое правило Бойцовского клуба.',
-        body: 'Бойцы сражаются без обуви и голые по пояс.'
-    },
-    {
-        title: 'Шестое правило Бойцовского клуба.',
-        body: 'Поединок продолжается столько, сколько потребуется.'
-    },
-    {
-        title: 'Седьмое правило Бойцовского клуба.',
-        body: 'Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок окончен.'
-    },
-    {
-        title: 'Восьмое и последнее правило Бойцовского клуба.',
-        body: 'Новичок обязан принять бой.'
-    },
-
-];
-
-
-function createElemDom(array) {
-    const wrap = document.createElement('div');
-    wrap.className = 'wrap';
-
-    for (let i = 0; i < array.length; i++) {
-        const rule = array[i];
-
-        const div = document.createElement('div');
-        div.className = `rules rule${i}`;
-
-        const h2 = document.createElement('h2');
-        const p = document.createElement('p');
-
-        h2.innerText = rule.title;
-        p.innerText = rule.body;
-
-        div.appendChild(h2);
-        div.appendChild(p);
-        wrap.appendChild(div);
-    }
-
-    document.body.appendChild(wrap);
-
-}
-
-createElemDom(rules);
-
-
 // ***- беремо завдання з правилами з укроку №3 :
 // Та робимо це функцією.При цьому правила отримувати через аргумент.
 // "Є масив котрий характеризує правила. Створити скрипт який ітерує цей масив, та робить з кожне правило
@@ -608,5 +542,70 @@ createElemDom(rules);
 // При цому в блоці, номер правила записати в свій блок, текст правила записати в свій окремий блок.
 // Результатом відпрацювання скріпта повинна бути структура яка міститься в блоці wrap файла rule.html
 
+// let rules = [
+//     {
+//         title: 'Первое правило Бойцовского клуба.',
+//         body: 'Никому не рассказывать о Бойцовском клубе.'
+//     },
+//     {
+//         title: 'Второе правило Бойцовского клуба.',
+//         body: 'Никогда никому не рассказывать о Бойцовском клубе.'
+//     },
+//     {
+//         title: 'Третье правило Бойцовского клуба.',
+//         body: 'В схватке участвуют только двое.'
+//     },
+//     {
+//         title: 'Четвертое правило Бойцовского клуба.',
+//         body: 'Не более одного поединка за один раз.'
+//     },
+//     {
+//         title: 'Пятое правило Бойцовского клуба.',
+//         body: 'Бойцы сражаются без обуви и голые по пояс.'
+//     },
+//     {
+//         title: 'Шестое правило Бойцовского клуба.',
+//         body: 'Поединок продолжается столько, сколько потребуется.'
+//     },
+//     {
+//         title: 'Седьмое правило Бойцовского клуба.',
+//         body: 'Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок окончен.'
+//     },
+//     {
+//         title: 'Восьмое и последнее правило Бойцовского клуба.',
+//         body: 'Новичок обязан принять бой.'
+//     },
 //
+// ];
+//
+//
+// function createElemDom(array) {
+//     const wrap = document.createElement('div');
+//     wrap.className = 'wrap';
+//
+//     for (let i = 0; i < array.length; i++) {
+//         const rule = array[i];
+//
+//         const div = document.createElement('div');
+//         div.className = `rules rule${i}`;
+//
+//         const h2 = document.createElement('h2');
+//         const p = document.createElement('p');
+//
+//         h2.innerText = rule.title;
+//         p.innerText = rule.body;
+//
+//         div.appendChild(h2);
+//         div.appendChild(p);
+//         wrap.appendChild(div);
+//     }
+//
+//     document.body.appendChild(wrap);
+//
+// }
+//
+// createElemDom(rules);
+
+
+
 			
