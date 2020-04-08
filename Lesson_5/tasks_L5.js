@@ -29,41 +29,26 @@
 // ]
 // }
 // Result:
-//
-// function Tags(tittleOfTag, action, attributes, tittleOfAttr, actionOfAttr, tittleOfAttr1, actionOfAttr1, tittleOfAttr2,
-//               actionOfAttr2) {
-//     this.tittleOfTag = tittleOfTag;
-//     this.action = action;
-//     // attributes:
-//     this.attributes = new Array();
-//
-//     this.attributes.push({tittleOfAttr: tittleOfAttr, actionOfAttr: actionOfAttr},);
-//     this.attributes.push({tittleOfAttr: tittleOfAttr1, actionOfAttr: actionOfAttr1},);
-//     this.attributes.push({tittleOfAttr: tittleOfAttr2, actionOfAttr: actionOfAttr2},);
-// //  другий варіант
-//     // this.attributes[0] = new Object();
-//     // this.attributes[1] = new Object();
-//     // this.attributes[2] = new Object();
-//     //attributes keys : values: // другий варіант
-// //     this.attributes[0].tittleOfAttr = tittleOfAttr;
-// //     this.attributes[0].actionOfAttr = actionOfAttr;
-// //     this.attributes[1].tittleOfAttr1 = tittleOfAttr1;
-// //     this.attributes[1].actionOfAttr1 = actionOfAttr1;
-// //     this.attributes[2].tittleOfAttr2 = tittleOfAttr2;
-// //     this.attributes[2].actionOfAttr2 = actionOfAttr2;
-//
-// }
-//
-// const tag = new Tags('a', 'linking into another sites',
-//     'href',
-//     'href',
-//     'Show the address to file',
-//     'name',
-//     'Sets the name of the anchor inside the document',
-//     'tittle',
-//     'Adds a tooltip to the link text');
-//
-// console.log(tag);
+
+const attrArray = [
+    {titleOfAttr: 'href', actionOfAttr: 'Show the address to file'},
+    {titleOfAttr: 'name', actionOfAttr: 'Sets the name of the anchor inside the document'},
+    {titleOfAttr: 'tittle', actionOfAttr: 'Adds a tooltip to the link text'}
+];
+
+function Tag(titleOfTag, action, array) {
+
+    this.titleOfTag = titleOfTag || 'No title';
+    this.action = action || 'No action';
+    this.array = attrArray.map(function (attrib) {
+        return attrib;
+
+    });
+}
+
+const  a = new Tag('a','linking', []);
+
+console.log(a);
 // TODO // дописати решту тегів через функцію конструктор в 1 завданні!!
 
 // ==============================================
@@ -129,8 +114,51 @@
 // -- info () - яка виводить всю інформацію про автомобіль
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
-// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і добавляет його в поточний об'єкт car
 // ==============================================
+
+// let car = {
+//     model: 'Vectra C GTS',
+//     producer: 'OPEL',
+//     year: 2002,
+//     maxSpeed: 200,
+//     engineCapacity: 1800,
+//
+//     drive() {
+//         console.log(`We are riding with speed ${this.maxSpeed} km per hour`);
+//     },
+//
+//     info(car) {
+//         console.log(car)
+//     },
+//
+//     increaseMaxSpeed(newSpeed) {
+//         this.maxSpeed += newSpeed;
+//
+//     },
+//
+//     changeYear(year) {
+//         this.year = this.newYear = year;
+//         delete car.year
+//     },
+//
+//     addDriver(name, age, experience, sex) {
+//         this.driver = {
+//             name: name,
+//             age: age,
+//             experience: experience,
+//             sex: sex,
+//         }
+//     }
+//
+//
+// };
+//
+// car.drive();
+// car.increaseMaxSpeed(220);
+// car.changeYear(2004);
+// car.addDriver('Roman', '29', 12, 'male');
+// car.info(car);
 
 // ==============================================
 // - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску,'
@@ -141,6 +169,51 @@
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
 // ==============================================
+//
+// function Car(model, producer, year, maxSpeed, engineCapacity) {
+//     this.model = model;
+//     this.producer = producer;
+//     this.year = year;
+//     this.maxSpeed = maxSpeed;
+//     this.engineCapacity = engineCapacity;
+//
+//
+//    this.drive = function()  {
+//         console.log(`We are riding with speed ${this.maxSpeed} km per hour`);
+//     };
+//
+//    this.info = () => {
+//        // console.log(this.model, this.year,this.producer, this.maxSpeed,this.engineCapacity);
+//        console.log(this);
+//    };
+//
+//    this.increaseMaxSpeed = (speed) => {
+//        this.newSpeed = this.maxSpeed = speed;
+//        delete this.maxSpeed;
+//    };
+//
+//    this.changeYear = (year) => {
+//      this.newYear = this.year = year;
+//      delete this.year;
+//    };
+//
+//     this.addDriver = function(name,age,experience,sex) {
+//        this.driver = {
+//            name: name,
+//            age: age,
+//            experience: experience,
+//            sex: sex,
+//        }
+//    }
+// }
+//
+// let volkswagen = new Car('Sirocco','VOLKSWAGEN',2012,280,'2500');
+//
+// volkswagen.drive();
+// volkswagen.increaseMaxSpeed(300);
+// volkswagen.changeYear(2015);
+// volkswagen.addDriver('Roman',29,12,'male');
+// volkswagen.info();
 
 // ==============================================
 // - Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна ' +
@@ -150,6 +223,41 @@
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+
+//
+// class Car {
+//     constructor(model, producer, year, maxSpeed, engineCapacity) {
+//
+//         this.model = model;
+//         this.producer = producer;
+//         this.year = year;
+//         this.maxSpeed = maxSpeed;
+//         this.engineCapacity = engineCapacity;
+//
+//
+//         this.drive = function () {
+//             console.log(`We are riding with speed ${this.maxSpeed} km per hour`)
+//         }
+//
+//         this.info = function () {
+//             console.log(this);
+//         }
+//
+//         this.increaseMaxSpeed = function (speed) {
+//             this.newSpeed = this.maxSpeed = speed;
+//             delete this.maxSpeed;
+//         }
+//
+//     }
+// }
+//
+// let toyota = new Car('PRADO', 'TOYOTA', 2005, 200, 3700)
+// console.log(toyota);
+// toyota.drive();
+// toyota.increaseMaxSpeed(220);
+// toyota.info();
+//
+
 // ==============================================
 
 // ==============================================
