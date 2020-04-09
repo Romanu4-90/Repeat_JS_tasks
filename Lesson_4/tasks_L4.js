@@ -23,13 +23,18 @@
 // fillArr();
 
 // - створити функцію яка приймає три числа та виводить та повертає найменьше.
-// function smallestNumber(a,b,c) {
-//     console.log(Math.min(a, b, c));
-// }
+function smallestNumber(a,b,c) {
+    let smallest = Math.min(a, b, c);
+    console.log(smallest);
+    return smallest;
+
+}
 // smallestNumber(2,4,1);
+let smNumb = smallestNumber(2,4,1);
+console.log(smNumb);
 
 // - створити функцію яка приймає три числа та виводить та повертає найбільше.
-// function smallestNumber(a,b,c) {
+// function biggestNumber(a,b,c) {
 //     console.log(Math.max(a, b, c));
 // }
 // smallestNumber(2,4,1);
