@@ -27,8 +27,9 @@
 
 
 // - создать массив со словами на 15-20 элементов.
-let words = ['Roman', 'opel', 'okten', 'js', 'html', 'css', 'Ukraine', 'Poland', 'Volkswagen', 'Ferrari', 'Dodge', 'Acura',
-    'Chevrolet', 'Honda'];
+// let words = ['Roman', 'opel', 'okten', 'js', 'html', 'css', 'Ukraine', 'Poland', 'Volkswagen', 'Ferrari', 'Dodge', 'Acura',
+//     'Chevrolet', 'Honda'];
+
 // -- отсортировать его по алфавиту в восходящем порядке.
 // let sortedArr = words.sort((a, b) => {
 //     let nameA = a.toLowerCase();// щоб порівнювало елементи не зележно з якої букви написаний кожен(велика чи мала)
@@ -38,70 +39,126 @@ let words = ['Roman', 'opel', 'okten', 'js', 'html', 'css', 'Ukraine', 'Poland',
 // });
 // console.log(sortedArr);
 
-
-
-
-
 // -- отсортировать его по алфавиту  в нисходящем порядке.
-
 // let sortedArr = words.sort((a, b) => {
 //     let nameA = a.toLowerCase();// щоб порівнювало елементи не зележно з якої букви написаний кожен(велика чи мала)
 //     let nameB = b.toLowerCase();// щоб порівнювало елементи не зележно з якої букви написаний кожен(велика чи мала)
-//     if (nameA < nameB) return -1;
-//     if (nameA > nameB) return 1;
+//     if (nameB < nameA) return -1;
+//     if (nameB > nameA) return 1;
 // });
 // console.log(sortedArr);
+
 // -- отфильтровать слова длиной менее 4х символов
+// let filtredArr = words.filter(word => word.length > 4);
+// console.log(filtredArr);
+
 // -- перебрать массив при помощи map() и получить новый массив в котором все значения будут со знаком "!" в конце
+// let formattedArr = words.map((word) => word + '!');
+// console.log(formattedArr);
+
 //
 // Все робити через функції масивів (foreach, map ...тд)
 // Дан масив :
-//     let users = [ {name: 'vasya', age: 31, status: false}, {name: 'petya', age: 30, status: true},
-//     {name: 'kolya', age: 29, status: true}, {name: 'olya', age: 28, status: false},
-//     {name: 'max', age: 30, status: true}, {name: 'anya', age: 31, status: false},
-//     {name: 'oleg', age: 28, status: false}, {name: 'andrey', age: 29, status: true},
-//     {name: 'masha', age: 30, status: true}, {name: 'olya', age: 31, status: false},
-//     {name: 'max', age: 31, status: true} ];
+// let users = [
+//     {name: 'vasya', age: 31, status: false},
+//     {name: 'petya', age: 30, status: true},
+//     {name: 'kolya', age: 29, status: true},
+//     {name: 'olya', age: 28, status: false},
+//     {name: 'max', age: 30, status: true},
+//     {name: 'anya', age: 31, status: false},
+//     {name: 'oleg', age: 28, status: false},
+//     {name: 'andrey', age: 29, status: true},
+//     {name: 'masha', age: 30, status: true},
+//     {name: 'olya', age: 31, status: false},
+//     {name: 'max', age: 31, status: true}
+// ];
 // - відсортувати його за  віком (зростання , а потім окремо спадання)
+// let sortFromYears = users.sort((a, b) => a.age - b.age); // зростання
+// let sortFromYears = users.sort((a, b) => b.age - a.age); // спадання
+// console.log(sortFromYears);
+
+
 // - відсортувати його за кількістю знаків в імені  (зростання , а потім окремо спадання)
+// let nameLengthsArr = users.sort((a, b) => a.name.length - b.name.length);// від найменш
+// let nameLengthsArr = users.sort((a, b) => b.name.length - a.name.length);// від найбільш.
+// console.log(nameLengthsArr);
+
 // - пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор
 // (По якому принципу його створювати - ваше рішення), та зберегти це в новий масив (первинний масив залишиться без змін)
+// перший спосіб:
+// let newUsers = [];
+// for (let i = 0; i < users.length; i++) {
+//     const user = users[i];
+//     user.id = i+1;
+//     newUsers.push(user);
+// }
+// console.log(newUsers);
+// другий спосіб with method  map:
 // - відсортувати його за індентифікатором
+// const newUsers = users.map((user,index) => {
+//     user.id = index+1;
+//     return user;
+// }).sort((firstUser, secondUser) => secondUser.id - firstUser.id);
 //
-//
+// console.log(newUsers);
+
+
 // -- наисать функцию калькулятора с 2мя числами и колбеком
+// function calc(a,b,cb) {
+//  cb(a,b);
+// }
+//
+// calc(1,2,function(a,b) {
+//     console.log(a + b);
+// });
+
 // -- наисать функцию калькулятора с 3мя числами и колбеком
+// function calc(a, b, c, cb) {
+//     cb(a, b, c);
+// }
 //
-// =============================================
-// =============================================
+// calc(1, 2, 3, function (a, b, c) {
+//     console.log((a + b) * c);
+// });
+
+
 // =============КЛАССНАЯ РАБОТА=================
-// =============================================
-// =============================================
-//
-//
-//
-//
-// let cars = [
-// {producer:"subaru",model: "wrx",year: 2010, color:"blue",type: "sedan",engine: "ej204x",volume: 2,power: 400},
-// {producer:"subaru",model: "legacy",year: 2007, color:"silver",type: "sedan",engine: "ez30",volume: 3,power: 250},
-// {producer:"subaru",model: "tribeca",year: 2011, color:"white",type: "jeep",engine: "ej20",volume: 2,power: 300},
-// {producer:"subaru",model: "leone",year: 1998, color:"yellow",type: "sedan",engine: "ez20x",volume: 2,power: 140},
-// {producer:"subaru",model: "impreza",year: 2014, color:"red",type: "sedan",engine: "ej204x",volume: 2,power: 200},
-// {producer:"subaru",model: "outback",year: 2014, color:"red",type: "hachback",engine: "ej204",volume: 2,power: 165},
-// {producer:"bmw",model: "115",year: 2013, color:"red",type: "hachback",engine: "f15",volume: 1.5,power: 120},
-// {producer:"bmw",model: "315",year: 2010, color:"white",type: "sedan",engine: "f15",volume: 1.5, power: 120},
-// {producer:"bmw",model: "650",year: 2009, color:"black",type: "coupe",engine: "f60",volume: 6,power: 350},
-// {producer:"bmw",model: "320",year: 2012, color:"red",type: "sedan",engine: "f20",volume: 2,power: 180},
-// {producer:"mercedes",model: "e200",year: 1990, color:"silver",type: "sedan",engine: "eng200",volume: 2,power: 180},
-// {producer:"mercedes",model: "e63",year 2017, color:"yellow",type: "sedan",engine: "amg63",volume:3,power: 400},
-// {producer:"mercedes",model: "c250",year: 2017, color:"red",type: "sedan",engine: "eng25",volume: 2.5,power: 230}
-// ];
+let cars = [
+{producer:"subaru",model: "wrx",year: 2010, color:"blue",type: "sedan",engine: "ej204x",volume: 2,power: 400},
+{producer:"subaru",model: "legacy",year: 2007, color:"silver",type: "sedan",engine: "ez30",volume: 3,power: 250},
+{producer:"subaru",model: "tribeca",year: 2011, color:"white",type: "jeep",engine: "ej20",volume: 2,power: 300},
+{producer:"subaru",model: "leone",year: 1998, color:"yellow",type: "sedan",engine: "ez20x",volume: 2,power: 140},
+{producer:"subaru",model: "impreza",year: 2014, color:"red",type: "sedan",engine: "ej204x",volume: 2,power: 200},
+{producer:"subaru",model: "outback",year: 2014, color:"red",type: "hachback",engine: "ej204",volume: 2,power: 165},
+{producer:"bmw",model: "115",year: 2013, color:"red",type: "hachback",engine: "f15",volume: 1.5,power: 120},
+{producer:"bmw",model: "315",year: 2010, color:"white",type: "sedan",engine: "f15",volume: 1.5, power: 120},
+{producer:"bmw",model: "650",year: 2009, color:"black",type: "coupe",engine: "f60",volume: 6,power: 350},
+{producer:"bmw",model: "320",year: 2012, color:"red",type: "sedan",engine: "f20",volume: 2,power: 180},
+{producer:"mercedes",model: "e200",year: 1990, color:"silver",type: "sedan",engine: "eng200",volume: 2,power: 180},
+{producer:"mercedes",model: "e63",year:2017, color:"yellow",type: "sedan",engine: "amg63",volume:3,power: 400},
+{producer:"mercedes",model: "c250",year: 2017, color:"red",type: "sedan",engine: "eng25",volume: 2.5,power: 230}
+];
 // Відфільтрувати масив за наступними крітеріями :
 //     - двигун більше 3х літрів
+// let filtredCars = cars.filter(car => car.volume > 3);
+// console.log(filtredCars);
+
 // - двигун = 2л
+// let filtredCars = cars.filter(car => car.volume === 2);
+// console.log(filtredCars);
+
 // - виробник мерс
+// let filtredCars = cars.filter(car => car.producer === 'mercedes');
+// console.log(filtredCars);
+
 // - двигун більше 3х літрів + виробник мерседес
+// let filtredCars = cars.filter(car => car.producer === 'mercedes' && car.volume > 3);
+// console.log(filtredCars);
+
 // - двигун більше 3х літрів + виробник субару
+// let filtredCars = cars.filter(car => car.producer === 'subaru' && car.volume > 3);
+// console.log(filtredCars);
+
 // - сили більше ніж 300
 // - сили більше ніж 300 + виробник субару
 // - мотор серіі ej
