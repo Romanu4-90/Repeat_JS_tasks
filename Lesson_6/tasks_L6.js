@@ -272,44 +272,44 @@
 //     Власник автомобіля теж має бути обєкт, у якого є поля
 // Імя, вік, стаж водіння.
 //     Створити не менше 7 та не більше 20 машинок.
-
-let cars = [
-    {model: 'opel vectra', enginePower: 140, owner: {name: 'Roman', age: 28, driveExp: 8}, price: 4000, prodYear: 2002},
-    {model: 'opel astra', enginePower: 110, owner: {name: 'Taras', age: 26, driveExp: 4}, price: 6000, prodYear: 2008},
-    {
-        model: 'volkswagen golf',
-        enginePower: 100,
-        owner: {name: 'Antoni', age: 25, driveExp: 6},
-        price: 3000,
-        prodYear: 2003
-    },
-    {
-        model: 'opel insignia',
-        enginePower: 160,
-        owner: {name: 'Orest', age: 44, driveExp: 18},
-        price: 10000,
-        prodYear: 2012
-    },
-    {
-        model: 'mini cooper',
-        enginePower: 170,
-        owner: {name: 'Natalia', age: 26, driveExp: 3},
-        price: 5000,
-        prodYear: 2001
-    },
-    {model: 'bmw 320', enginePower: 140, owner: {name: 'Misha', age: 32, driveExp: 10}, price: 3800, prodYear: 2000},
-    {model: 'audi a6', enginePower: 180, owner: {name: 'Ira', age: 27, driveExp: 2}, price: 14000, prodYear: 2010},
-];
-
-let newDrivers = [
-    {name: 'Andrii', age: 33, driveExp: 12},
-    {name: 'Oleh', age: 34, driveExp: 13},
-    {name: 'Mark', age: 38, driveExp: 14},
-    {name: 'Derek', age: 39, driveExp: 15},
-    {name: 'Phill', age: 40, driveExp: 16},
-    {name: 'Tom', age: 41, driveExp: 17},
-    {name: 'Kevin', age: 42, driveExp: 18},
-];
+//
+// let cars = [
+//     {model: 'opel vectra', enginePower: 140, owner: {name: 'Roman', age: 28, driveExp: 8}, price: 4000, prodYear: 2002},
+//     {model: 'opel astra', enginePower: 110, owner: {name: 'Taras', age: 26, driveExp: 4}, price: 6000, prodYear: 2008},
+//     {
+//         model: 'volkswagen golf',
+//         enginePower: 100,
+//         owner: {name: 'Antoni', age: 25, driveExp: 6},
+//         price: 3000,
+//         prodYear: 2003
+//     },
+//     {
+//         model: 'opel insignia',
+//         enginePower: 160,
+//         owner: {name: 'Orest', age: 44, driveExp: 18},
+//         price: 10000,
+//         prodYear: 2012
+//     },
+//     {
+//         model: 'mini cooper',
+//         enginePower: 170,
+//         owner: {name: 'Natalia', age: 26, driveExp: 3},
+//         price: 5000,
+//         prodYear: 2001
+//     },
+//     {model: 'bmw 320', enginePower: 140, owner: {name: 'Misha', age: 32, driveExp: 10}, price: 3800, prodYear: 2000},
+//     {model: 'audi a6', enginePower: 180, owner: {name: 'Ira', age: 27, driveExp: 2}, price: 14000, prodYear: 2010},
+// ];
+//
+// let newDrivers = [
+//     {name: 'Andrii', age: 33, driveExp: 12},
+//     {name: 'Oleh', age: 34, driveExp: 13},
+//     {name: 'Mark', age: 38, driveExp: 14},
+//     {name: 'Derek', age: 39, driveExp: 15},
+//     {name: 'Phill', age: 40, driveExp: 16},
+//     {name: 'Tom', age: 41, driveExp: 17},
+//     {name: 'Kevin', age: 42, driveExp: 18},
+// ];
 
 //Зробили половину автопарку ремонт мотору, що збільшить потужність автомобілів на 10%
 //(переприсвоєння змінної потужності). i вартість на 5%;
@@ -365,15 +365,30 @@ let newDrivers = [
 // 2. Key = 4
 // Answer: MinIndex = 3, MaxIndex = 6.
 
-// let arr = [1, 2, 3, 4, 4, 4, 4, 7, 7, 9, 14, 9, 12, 9, 11];
-//
+// let arr = [1, 2, 11, 4, 4, 4, 4, 7, 7, 9, 14, 9, 12, 9, 11];
+// first method:
 // function findIndexOfKey(array, key) {
-//     for (const number of array) {
-//         if (key === number) {
 //             let minIndex = array.indexOf(key);
 //             let maxIndex = array.lastIndexOf(key);
+//
 //             return `minIndex = ${minIndex}, maxIndex = ${maxIndex}`;
-//         }
-//     }
 // }
-// console.log(findIndexOfKey(arr, 1));
+// console.log(findIndexOfKey(arr, 4));
+//
+// second method:
+// let key = 4, maxMinIndex = [], maxInd, minInd;
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === key) {
+//         maxMinIndex.push(i);
+//     }
+//     maxInd = Math.max(...maxMinIndex);
+//     minInd = Math.min(...maxMinIndex);
+//
+// }
+// // console.log(maxMinIndex);
+// console.log(`minInd = ${minInd}, maxInd = ${maxInd}`);
+
+
+
+
+
